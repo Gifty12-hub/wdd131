@@ -11,7 +11,7 @@ header {
     grid-column: 1 / 4;
 }
 nav {
-    background-color: rgb(91, 121, 42);
+    background-color: rgb(28, 29, 27);
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -19,12 +19,18 @@ nav {
 }
 nav a {
     display: block;
-    color: rgb(71, 34, 34);
+    color: rgb(255, 255, 255);
     padding: 0.5rem;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
 }
+.black a:hover {
+    background-color: blue;
+    border-radius: 10px;
+
+}
+
 main {
     grid-column: 1 / 3;
 }
