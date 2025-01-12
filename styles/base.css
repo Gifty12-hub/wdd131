@@ -50,6 +50,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 2fr;
     padding: 2rem;
+    max-width: 1400px;
 }
 img {
     border: 1px solid steelblue;
