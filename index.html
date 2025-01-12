@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Gifty Akosua Arkoh</title>
-    <script src="getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
     <meta name="description" content="My name is Gifty Akosua Arkoh i am studying Software developmet. This page is used to know more about me and what i do.">
     <meta name="author" content="Gifty Akosua Arkoh">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,18 +46,9 @@
             </ul>
             </section>
         </main>
-    
         <footer>
             <p>&copy; <span id="currentyear"></span> 💻Gifty Akosua Arkoh💻,Ghana.<p>
-                <script>
-                    const currentYear = new Date().getFullYear();
-                    document.getElementById("currentyear").innerHTML = currentYear;
-                </script>
-            <p id="lastModified"></p>
-                <script>
-                    const lastModified = document.lastModified; 
-                    document.getElementById("lastModified").innerHTML = "Last Modified: " + lastModified;
-                </script>
+            <p id="lastModified"></p>   
         </footer>
 </body>
 </html>
