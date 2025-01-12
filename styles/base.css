@@ -5,6 +5,19 @@ body {
     font-family: "Lato", serif;
     font-weight: 400;
 }
+header h1 {
+    background-color: blue;
+    color: azure;
+    text-align: center;
+    padding-right: 2.9px;
+    padding: 0.3rem;
+    text-align: center;
+    width: 60%;
+    margin-left: 10rem;
+    margin-top: 7px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 nav {
     background-color: rgb(56, 57, 58);
     padding: 10px;
@@ -21,7 +34,7 @@ nav a {
     font-weight: 300;
     position: relative;
 }
-h1 {
+h2 {
     background-color: blue;
     color: azure;
     text-align: center;
@@ -30,13 +43,13 @@ h1 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-h2 {
+h1 {
     border-bottom: 1px solid #ddd;
     border-width: 2px;
     padding-right: 10px;
     text-align: center;
     width: 60%;
-    margin-left:1rem;
+    margin-left:10rem;
 }
 main {
     margin: 0 auto; 
