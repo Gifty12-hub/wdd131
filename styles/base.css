@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", serif;
+    font-weight: 400;
+}
+nav {
+    background-color: rgb(56, 57, 58);
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a:hover {
+    background-color: rgb(36, 190, 56);
+}
+nav a {
+    text-decoration: none;
+    color: rgb(243, 235, 235);
+    font-weight: 300;
+    position: relative;
+}
+h1 {
+    background-color: blue;
+    color: azure;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+h2 {
+    border-bottom: 1px solid #ddd;
+    border-width: 2px;
+    padding-right: 10px;
+    text-align: center;
+    width: 60%;
+    margin-left:1rem;
+}
+main {
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 2rem;
+}
+img {
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+.card {
+    background-color: beige;
+    padding: 0;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    border-radius: 10px;
+}
+.card p {
+    display: block;
+    padding: 1rem;
+    text-align: left;
+    margin-right: 5rem;
+}
+.profile img {
+    float: right;
+    height: auto;
+}
+.flag img {
+    float: left;
+    height: auto;
+    margin-top: 0.1rem;
+}
+figcaption {
+    padding-bottom: 1.5rem;
+    text-align: left;
+    font-size: 0.65rem;
+    margin-left: 3.5rem;
+    margin-top: 3rem;
+    font-style: italic;
+}
+footer {
+    text-align: center;
+    background-color: rgb(53, 20, 20);
+    color: white;
+    padding: 0.1rem;
+    width: 100%;
+}
+.card ul {
+    margin-left: 2rem;
+    margin-top: 7rem;
+    padding: 0 auto;
+}
+.card li {
+    margin: 7px 0;
+}
