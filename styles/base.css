@@ -5,19 +5,13 @@ body {
     font-family: "Lato", serif;
     font-weight: 400;
 }
-header h1 {
+header {
+    width: 100%;
     background-color: blue;
     color: azure;
     text-align: center;
-    padding-right: 2.9px;
-    padding: 0.3rem;
-    text-align: center;
-    width: 60%;
-    margin-left: 10rem;
-    margin-top: 7px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
+
 nav {
     background-color: rgb(56, 57, 58);
     padding: 10px;
@@ -29,10 +23,10 @@ nav a:hover {
     background-color: rgb(36, 190, 56);
 }
 nav a {
+    display: block;
     text-decoration: none;
     color: rgb(243, 235, 235);
-    font-weight: 300;
-    position: relative;
+    padding: 0.75rem 1rem;
 }
 h2 {
     background-color: blue;
@@ -43,7 +37,7 @@ h2 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-h1 {
+h3 {
     border-bottom: 1px solid #ddd;
     border-width: 2px;
     padding-right: 10px;
