@@ -27,19 +27,16 @@ h1 {
 	color: rgb(205, 219, 219);
 }
 
-
-
-
-
 #menu {
-	display: block;
-	font-size: 2rem;
-	font-weight: 700;
-	text-decoration: none;
-	padding: 0.5rem 75rem;
-	background-color: none;
-	color: #b64e4e;
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
 }
+
 #menu::before {
 	content: "☰";
 }
@@ -48,14 +45,14 @@ h1 {
 }
 
 nav {
-	background-color: rgb(151, 120, 93);
+	display: flex;
+	flex-direction: column;
 }
 .navbar {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	list-style: none;
-	background-color: rgb(156, 219, 83);
 	color: #fff;
 }
 .navbar a {
@@ -74,11 +71,6 @@ nav {
 .open a {
 	display: block;
 }
-
-
-
-
-
 
 main { 
     max-width: 800px;
