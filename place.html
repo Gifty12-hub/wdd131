@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="scripts/place.js" defer></script>
+    <meta name="description" content="My name is Gifty Akosua Arkoh i am studying Software developmet. This page is used to display my country.">
+    <title>My Country Page</title>
+    <meta name="author" content="Gifty Akosua Arkoh">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@380&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ghana</h1>
+        </header>
+        <main class="hero">
+            <picture>
+                <source srcset="images/gh1.webp" media="(min-width: 1000px)">
+                <source srcset="images/gh1.webp" media="(min-width: 500px)">
+                <img src="images/gh1.webp" alt="Ghana">
+            </picture>
+        </main>
+        <section class="data">
+            <h2>Data</h2>
+                <p>Area: 587,041sqkm</p>
+                <p>Population: 27,691,018</p>
+                <p>Capital: Accra</p>
+                <p>Languages: English and Akan</p>
+                <p>Currency: Cedis</p>
+                <p>Time Zone: UTC</p>
+                <p>Calling Code: +233</p>
+                <p>Internet TLD: .mg</p>
+        </section>
+        <section class="weather">
+            <h2><span class="weather-emoji">Weather ⛅</span></h2>
+                <p>Temperature: 10 </p>
+                <p>Conditions: Partly Cloudy</p>
+                <p>Wind Speed: 5 </p>
+                
+        </section>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> 💻Gifty Akosua Arkoh💻,Ghana.</p>
+            <p id="lastModified"></p> 
+        </footer>
+    </div>
+</body>
+</html>

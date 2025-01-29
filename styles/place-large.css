@@ -1,0 +1,29 @@
+@media screen and (max-width: 768px) {
+    .data {
+        position: relative;
+        width: 90%;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 1rem auto;
+        padding: 10px;
+    }
+    
+    .weather {
+        position: relative;
+        width: 90%;
+        left: auto;
+        right: auto;
+        margin: 1rem auto;
+        padding: 10px;
+    }
+    .hero img {
+        height: auto;
+    }
+    
+    .weather {
+        top: auto;
+    }
+}
+
+
