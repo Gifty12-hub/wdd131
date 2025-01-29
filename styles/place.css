@@ -15,7 +15,7 @@ body {
 
 header,footer {
     text-align: center;
-    background-color: rgb(44, 11, 11);
+    background-color: rgb(39, 16, 16);
     color: white;
     padding: 1.1rem;
     width: 100%;
@@ -55,7 +55,6 @@ header,footer {
 .data p {
     text-align: center;
     padding-right: 1rem;
-    color: black;
 }
 
 .weather {
@@ -67,18 +66,24 @@ header,footer {
     width: 34%;
     padding: 3px;
 }
-.weather-emoji {
+.weather h2 {
     background-color: var(--secondary-color);
-    padding: 10px;
+    padding: 9px;
     margin-bottom: 20px;
     color: rgb(15, 15, 15);
-    border: 10px solid rgba(8, 8, 8, 0.1);
+    border: 8px solid rgba(8, 8, 8, 0.1);
     width: 150px;
     position: relative;
     right: 15px;
 }
+.weather-icon {
+    position: absolute;
+    top: 0.1em;
+    left: 6rem;
+}
 .weather p {
     text-align: center;
-    padding-right: 1rem;
+    padding-right: 0.1rem;
+    color: azure;
 }
 
