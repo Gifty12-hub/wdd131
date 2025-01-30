@@ -86,18 +86,12 @@ header,footer {
     padding-right: 0.1rem;
     color: azure;
 }
-.data h2::after {
-    font-size: 20px;
-    color: #d40c48; /* Match the color of your text */
-    position: absolute;
-    right: -25px; /* Adjust the position of the icon */
-    top: 0;
-}
 
 .weather h2::after {
-    font-size: 20px;
-    color: #d40c48; /* Adjust color as needed */
+    content: " "; /* You can change the icon to reflect actual weather */
+    font-size: 30px; /* Size of the icon */
     position: absolute;
-    right: -25px; /* Adjust the icon's position */
-    top: 0;
+    right: -35px; /* Adjust this to position the icon after the heading */
+    top: 5px; /* Adjust this to align it with the heading */
+    color: #d40c48; /* Match your design color */
 }
