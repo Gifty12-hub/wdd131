@@ -4,17 +4,26 @@ document.getElementById("currentyear").innerHTML = currentYear;
 const lastModified = document.lastModified; 
 document.getElementById("lastModified").innerHTML = "Last Modified: " + lastModified;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const temperature = 10; // Static temperature in Celsius
-    const windSpeed = 5; // Static wind speed in km/h
-    const windChillElement = document.querySelector(".weather p:nth-child(4)");
-
-    function calculateWindChill(temp, wind) {
-        return (13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16)).toFixed(1);
-    }
-    if (temperature <= 10 && windSpeed > 4.8) {
-        windChillElement.textContent = `Wind Chill: ${calculateWindChill(temperature, windSpeed)} °C`;
+function calculateWindChill(temperature, windSpeed) {
+    // Check if the conditions for windchill calculation are met
+    if (temperature <= 10 && windSpeed > 4.8) { // Conditions in metric units (Celsius, km/h)
+        // Windchill formula for Celsius
+        return Math.round(13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16));
+    } else if (temperature <= 50 && windSpeed > 3) { // Conditions for imperial units (Fahrenheit, mph)
+        // Windchill formula for Fahrenheit
+        return Math.round(35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16));
     } else {
-        windChillElement.textContent = "Wind Chill: N/A";
+        // If the conditions are not met, return "N/A"
+        return "N/A";
     }
-});
+}
+
+// Static temperature and wind speed values for this example
+const temperature = 27; // in Celsius
+const windSpeed = 14; // in km/h
+
+// Call the function and display the windchill factor in the Weather section
+const windChill = calculateWindChill(temperature, windSpeed);
+
+// Update the windchill value on the page
+document.getElementById('windChill').textContent = windChill;
