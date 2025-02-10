@@ -4,6 +4,14 @@ document.getElementById("currentyear").innerHTML = currentYear;
 const lastModified = document.lastModified; 
 document.getElementById("lastModified").innerHTML = "Last Modified: " + lastModified;
 
+const mainnav = document.querySelector('.navbar');
+const hambuttom = document.querySelector('#menu');
+
+hambuttom.addEventListener('click', () => {
+  mainnav.classList.toggle('open');
+  hambuttom.classList.toggle('open');
+});
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -62,69 +70,67 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "Abidjan, Ivory Coast",
-    Location: "Cocody, Abidjan",
-    dedicated: "2025, May 25",
-    area: 0.55,
-    imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/abidjan-ivory-coast-temple/abidjan-ivory-coast-temple-56230-thumb.jpg"
+    templeName: "London England Temple",
+    location: "New Chapel",
+    dedicated: "1958, September, 7-9",
+    area:42652,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/london-england-temple/london-england-temple-4243-main.jpg"
   },
   {
-    templeName: "Bountiful, Utah",
-    Location: "Bountiful, Utah",
-    dedicated: "1995, January 14",
-    area: 5160,
-    imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-53930-thumb.jpg"
+    templeName: "Praia Cape Verde Temple",
+    location: "Avenida Cidade de Lisboa",
+    dedicated: "2022, June, 19",
+    area:8759,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/praia-cape-verde-temple/praia-cape-verde-temple-27204-main.jpg"
   },
   {
-    templeName: "Dallas, Texas",
-    Location: "Dallas, Texas",
-    dedicated: "1984, October 24",
-    area: 44207,
-    imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/dallas-texas-temple/dallas-texas-temple-43422-thumb.jpg"
- 
+    templeName: "Suva Fiji Temple",
+    location: "Samabula, Suva",
+    dedicated: "2000, June, 18",
+    area:12755,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/suva-fiji-temple/suva-fiji-temple-8571-main.jpg"
   }
 ];
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.createElement("div");
-  container.classList.add("temple-container");
-  document.body.appendChild(container);
 
-  const filterTemples = (filter) => {
-    container.innerHTML = "";
-    let filteredTemples = temples;
-    
-    if (filter === "old") {
-      filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
-    } else if (filter === "new") {
-      filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
-    } else if (filter === "large") {
-      filteredTemples = temples.filter(t => t.area > 90000);
-    } else if (filter === "small") {
-      filteredTemples = temples.filter(t => t.area < 10000);
-    }
-    
-    filteredTemples.forEach((temple) => {
-      const card = document.createElement("div");
-      card.classList.add("temple-card");
-
-      card.innerHTML = `
-        <h2>${temple.templeName}</h2>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Area:</strong> ${temple.area} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-      `;
-
-      container.appendChild(card);
-    });
-  };
-
-  document.querySelectorAll(".filter-button").forEach(button => {
-    button.addEventListener("click", () => filterTemples(button.dataset.filter));
+// Function to create and display temple cards
+function displayTemples(filteredTemples) {
+  const templeCardsContainer = document.getElementById('temple-cards-container');
+  templeCardsContainer.innerHTML = '';
+  filteredTemples.forEach(temple => {
+    const card = document.createElement('div');
+    card.className = 'figureC';
+    card.innerHTML = `
+      <figure>
+        <div class="capt">
+          <h2>${temple.templeName}</h2>
+          <p><strong>Location:</strong> ${temple.location}</p>
+          <p><strong>Dedicated:</strong> ${new Date(temple.dedicated).toLocaleDateString()}</p>
+          <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+        </div>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="200" height="100">
+      </figure>
+    `;
+    templeCardsContainer.appendChild(card);
   });
+}
 
-  filterTemples("home");
+// Filter function
+function filterTemples(condition) {
+  return temples.filter(condition);
+}
+
+// Event listeners for filtering
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('home').addEventListener('click', () => displayTemples(temples));
+  document.getElementById('old').addEventListener('click', () => displayTemples(filterTemples(temple => new Date(temple.dedicated).getFullYear() < 1900)));
+  document.getElementById('new').addEventListener('click', () => displayTemples(filterTemples(temple => new Date(temple.dedicated).getFullYear() > 2000)));
+  document.getElementById('large').addEventListener('click', () => displayTemples(filterTemples(temple => temple.area > 90000)));
+  document.getElementById('small').addEventListener('click', () => displayTemples(filterTemples(temple => temple.area < 10000)));
+
+  // Display all temples on load
+  displayTemples(temples);
 });
+

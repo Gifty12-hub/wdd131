@@ -27,6 +27,10 @@ h1 {
 	font-size: 2rem;
 	color: rgb(9 18 18);
 }
+.wrap1 {
+	max-width: 1100px;
+	margin: 0 auto;
+}
 
 #menu {
 	font-size: 1.5rem;
@@ -69,78 +73,75 @@ nav {
 	font-weight: 700;
 }
 
-  .filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .filter-button {
-    background-color: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .filter-button:hover {
-    background-color: #2980b9;
-  }
-  
-main {
-    flex: 1;  /* Takes the remaining space in the body */
-    padding: 2rem;
-  }
-  
-  .temple-container {
+.open a {
+	display: block;
+}
+
+main { 
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+	text-decoration: none;
+	margin: 30px;
+	font-size: 40px;
+}  
+
+
+figure {
+	background-color:#40c27b;
+}
+img { 
+	margin: 0.5rem;
+}
+figcaption {
+	font-size: smaller;
+	text-align: center;
+	color: rgb(22, 25, 201);
+}
+.temples {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    justify-content: center;  /* Ensures the grid items are centered */
-  }
-  
-  .temple-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .temple-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .temple-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .temple-card h2 {
-    font-size: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.figureC {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.capt {
     margin: 1rem;
-  }
-  
-  .temple-card p {
-    font-size: 1rem;
-    margin: 0.5rem 1rem;
-  }
-  
-  footer {
+}
+.capt h2 {
+	font-size: 1.5rem;
+	color: rgb(41 57 130);
+	text-align: center;
+}
+.capt p {
+	font-size: 1rem;
+	color: #000;
+	text-align: center;
+}
+figure {
+	margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+.figureC :hover {
+	box-shadow: 8px 8px 20px rgba(8, 3, 3, 0.762);
+}
+.figureC img {
+	border-radius: 5px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+footer {
 	text-align: center;
     background-color: rgb(53, 20, 20);
     color: white;
     padding: 10.1px;
     width: 100%;
 }
-  
-  footer p {
-    margin: 0.5rem 0;
-  }
-  
-  
- 
