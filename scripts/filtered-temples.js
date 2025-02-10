@@ -100,7 +100,7 @@ function displayTemples(filteredTemples) {
   const templeCardsContainer = document.getElementById('temple-cards-container');
   templeCardsContainer.innerHTML = '';
   filteredTemples.forEach(temple => {
-    const card = document.createElement('div');
+    const card = document.createElement('articles');
     card.className = 'figureC';
     card.innerHTML = `
       <figure>
