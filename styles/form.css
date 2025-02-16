@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans, serif';
+    font-size: 1.2em;
+    color: #1a1818;
+    background-color:#974bb365 ;
+}
+header {
+    margin: 0 auto;
+    width: 650px;
+    padding: 1.5em 0;
+    width: 650px;
+    text-align: center;
+    background-color: rgb(156, 100, 27);
+    color: #000000;
+}
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color:navy;
+    text-align: center;
+}
+form {
+    width:650px;
+    margin: 0 auto;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    background-color: #4e79ac;
+}
+div {
+    margin-bottom: 20px;
+}
+label, input, button, select, textarea {
+    font-family: 'Work Sans , serif';
+}
+label {
+    text-align: left;
+    padding-right: 1rem;
+}
+input, select, textarea {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+input[type='checkbox'] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+button {
+    margin: 1rem;
+    background-color: navy;
+    color: #69aa33a1;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+}
+button:hover {
+    background-color: darkorange;
+}
+footer {
+    margin: 1rem auto 0;
+    width: 650px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #000000;
+    border-top: 1px solid #ccc;
+    background-color: rgb(27, 56, 185);
+}
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.feature input[type="checkbox"] {
+    margin-right: 10px;
+}
+.feature label {
+    font-size: 1em;
+}
+.stars {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rate label {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+
+}
+.rate input[type="radio"] {
+    display: block;
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="radio"] {
+    margin-right: 5px;
+}

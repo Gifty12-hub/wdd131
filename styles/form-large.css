@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1em;
+        background-color: #22cf56;
+    }
+    header, form, footer {
+        width: 70%;
+    }
+    form {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    input, select, textarea, button {
+        font-size: 1rem;
+        padding: 0.4rem;
+    }
+    .stars {
+        flex-direction: row;
+        align-items: left;
+    }
+    .rate label {
+        font-size: 1.2em;
+    }
+    button {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
