@@ -85,9 +85,9 @@ footer {
 }
 .stars {
     display: flex;
+    justify-content: flex-start;
     justify-content: space-between;
     gap: 10px;
-    flex-wrap: wrap;
 }
 .rate {
     display: flex;
