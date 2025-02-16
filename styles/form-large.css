@@ -18,7 +18,7 @@
     }
     .stars {
         flex-direction: row;
-        align-items: left;
+        align-items: flex-start;
     }
     .rate label {
         font-size: 1.2em;
