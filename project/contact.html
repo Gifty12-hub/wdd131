@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls In STEM</title>
+    <script src="scripts/project.js" defer></script>
+    <meta name="description" content="My name is Gifty Akosua Arkoh i am studying Software developmet. This page is used to showcase the materials girls can learn in STEM.">
+    <meta name="author" content="Gifty Akosua Arkoh">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@380&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+</head>
+<body>
+    <header>
+        <img src="images/gis.jpg" alt="Girls in STEM Ghana Logo" width="100">
+        <h1>STEM Hub for Girls in Ghana</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        <picture>
+            <source srcset="images/gisy.webp" media="(min-width: 1000px)">
+            <source srcset="images/gist.webp" media="(min-width: 500px)">
+            <img src="images/gist.webp" alt="STEM">
+        </picture>
+    </main>
+    <section>
+        <form action="feedback.html" method="get" id="review-form">
+            <div>
+                <label for="product">Interest Form:</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select what you want learn ...</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Overall Rating For the Site:</label>
+                <div class="stars">
+                    <div class="rate">
+                        <label for="stars1">☆</label>
+                        <input type="radio" id="stars1" name="stars" value="1" required>
+                    </div>
+                    <div class="rate">
+                        <label for="star2">☆☆</label>
+                        <input type="radio" id="star2" name="stars" value="2" required>
+                    </div>
+                    <div class="rate">
+                        <label for="stars3">☆☆☆</label>
+                        <input type="radio" id="stars3" name="stars" value="3" required>
+                    </div>
+                    <div class="rate">
+                        <label for="stars4">☆☆☆☆</label>
+                        <input type="radio" id="stars4" name="stars" value="4" required>
+                    </div>
+                    <div class="rate">
+                        <label for="stars5">☆☆☆☆☆</label>
+                        <input type="radio" id="stars5" name="stars" value="5" required>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="birth-date">Date of Birth:</label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div>
+
+            <div>
+                <label>Which course would you like to learn?</label>
+                <label class="style">(Check all that apply.)</label>
+                <div class="feature">
+                    <input type="checkbox" id="feature1" name="features" value="Coding">
+                    <label for="feature1">Coding</label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="feature2" name="features" value="Robotics">
+                    <label for="feature2">Robotics</label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="feature3" name="features" value="IT Essentials">
+                    <label for="feature3">IT Essentials</label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="feature4" name="features" value="Virtual Reality">
+                    <label for="feature4">Virtual Reality</label>
+                </div>
+                <div class="feature">
+                    <input type="checkbox" id="feature5" name="features" value="Web Development">
+                    <label for="feature5">Web Development</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="written-review">Tell us about yourself:</label>
+                <textarea id="written-review" name="review" required></textarea>
+            </div>
+
+            <div>
+                <label for="user-name">Your Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section>
+        <div class="address">
+            <div class="add-phone">
+                <address>
+                    123 LDS St,
+                    <br>
+                    Gifty, ID 2220
+                </address>
+                <a href="tel:059-634-4814">(059)634-4814</a>
+                <a href="mailto:giftyarkoh81@gmail.com">email: giftyarkoh81@gmail.com</a>     
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.260960693846!2d-0.43628412627635305!3d5.528249533930754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfba8d082edad7%3A0x5e54622d16c9a9c5!2sThe%20Church%20Of%20Jesus%20Christ%20Of%20Latter-Day%20Saints%20(Kasoa%20Stake%20Center)!5e0!3m2!1sen!2sgh!4v1729061619604!5m2!1sen!2sgh" width="400" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 💻Gifty Akosua Arkoh💻,Ghana.</p>
+        <p id="lastModified"></p> 
+    </footer>
+</body>    

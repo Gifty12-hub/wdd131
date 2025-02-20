@@ -29,7 +29,6 @@ h1 {
 	max-width: 1100px;
 	margin: 0 auto;
 }
-
 #menu {
 	font-size: 1.5rem;
 	border: 0;
@@ -39,14 +38,12 @@ h1 {
 	top: 1rem;
 	right: 1rem;
 }
-
 #menu::before {
 	content: "☰";
 }
 #menu.open::before {
 	content: "❌";
 }
-
 nav {
 	display: flex;
 	flex-direction: column;
@@ -70,11 +67,9 @@ nav {
 	color: rgb(12, 11, 12);
 	font-weight: 700;
 }
-
 .open a {
 	display: block;
 }
-
 main { 
     margin: 0 auto;
 }
@@ -85,8 +80,6 @@ h2 {
 	margin: 30px;
 	font-size: 40px;
 }  
-
-
 figure {
 	background-color:#d6ddd9;
 }
