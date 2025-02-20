@@ -56,3 +56,34 @@ function populateProductDropdown() {
 
 // Populate the dropdown when the page loads
 window.onload = populateProductDropdown;
+
+
+// Welcome Message with Local Storage
+const welcomeMessage = document.createElement("p");
+const container = document.querySelector(".container");
+let lastVisit = localStorage.getItem("lastVisit");
+let currentTime = new Date().getTime();
+
+if (lastVisit) {
+    let timeDiff = Math.floor((currentTime - lastVisit) / (1000 * 60 * 60 * 24));
+    welcomeMessage.textContent = timeDiff === 0 ? 
+        "Welcome back! You visited us today." : 
+        `Welcome back! It's been ${timeDiff} days since your last visit.`;
+} else {
+    welcomeMessage.textContent = "Welcome to Girls in STEM Ghana! We are glad to have you here.";
+}
+container.insertBefore(welcomeMessage, container.firstChild);
+localStorage.setItem("lastVisit", currentTime);
+
+// Interactive Resource Cards - Hover Effect
+const resourceFigures = document.querySelectorAll(".resources figure");
+
+resourceFigures.forEach(figure => {
+    figure.addEventListener("mouseover", () => {
+        figure.style.transform = "scale(1.1)";
+        figure.style.transition = "0.3s";
+    });
+    figure.addEventListener("mouseout", () => {
+        figure.style.transform = "scale(1)";
+    });
+});
